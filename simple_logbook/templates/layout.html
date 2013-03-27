@@ -17,7 +17,9 @@
 				<div id=headerright>
 					{% load account %}
 					{% if user.is_authenticated %}
-					{% user_display user %}&nbsp;<a href="{% url 'account_logout' %}" alt="Click to sign out">LogOut</a>
+					{% user_display user %}&nbsp;<a href="{% url 'account_logout' %}" alt="Click to sign out">LogOut</a><br />
+					<a href="{% url 'account_change_password' %}">Change password</a><br />
+					<a href="{% url 'socialaccount_connections' %}">Social Auth Connections</a>
 					{% else %}
 					<a href="{% url 'account_login' %}">Sign In</a> or <a href="{% url 'account_signup' %}">Sign Up</a></li>
 					{% endif %}
