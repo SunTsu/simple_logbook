@@ -1,0 +1,3 @@
+[submodule "logbook"]
+	path = logbook
+	url = /home/sascha/development/python/django/apps/logbook
