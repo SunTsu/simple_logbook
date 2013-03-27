@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang=en>
+	<head>
+		<link rel=stylesheet type=text/css href="{{ STATIC_URL }}style.css">
+		<title>{% block title %}Wir Gehen Mit - Logbook{% endblock %}</title>
+	</head>
+	<body>
+		{% block script %} {% endblock %}
+		<div id=wrap>
+			<div id=header>
+				<div id=headerleft>
+					<a href="https://wirgehenmit.org"><h2>Wir Gehen Mit - Logbook</h2></a>
+					{% block header %}
+						Homepage
+					{% endblock %}
+				</div>
+				<div id=headerright>
+					{% load account %}
+					{% if user.is_authenticated %}
+					{% user_display user %}&nbsp;<a href="{% url 'account_logout' %}" alt="Click to sign out">LogOut</a>
+					{% else %}
+					<a href="{% url 'account_login' %}">Sign In</a> or <a href="{% url 'account_signup' %}">Sign Up</a></li>
+					{% endif %}
+				</div>
+			</div>
+			<div id=content>
+				{% if messages %}
+				<div id=message>
+					<ul class="messages">
+						{% for message in messages %}
+						<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+				{% endif %}
+				<div id=page>
+					<h1>Logbook</h1>
+					{% block body %}{% endblock %}
+				</div>
+				<div id=sidebar>
+					{% block sidebar %}{% endblock %}
+				</div>
+			</div>
+			<div id=footer>
+				{% block footer %}<p>Dieses ist eine Testversion, Fehler bitten wir zu entschuldigen und über den verlinkten Bugtracker zu melden.<br />
+				Vielen Dank.</p>{% endblock %}
+			</div>
+		</div>
+	</body>
+</html>
