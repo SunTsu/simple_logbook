@@ -1,4 +1,6 @@
 # Django default settings for simple_logbook project.
+import os,sys
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.4/ref/settings/#allowed-hosts
@@ -104,6 +106,7 @@ INSTALLED_APPS = (
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.openid',
+    'south',
 )
 
 AUTHENTICATION_BACKENDS = (
