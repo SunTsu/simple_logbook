@@ -2,14 +2,14 @@
 <html lang=en>
 	<head>
 		<link rel=stylesheet type=text/css href="{{ STATIC_URL }}style.css">
-		<title>{% block title %}Wir Gehen Mit - Logbook{% endblock %}</title>
+		<title>{% block title %}{{ SITE_NAME }}{% endblock %}</title>
 	</head>
 	<body>
 		{% block script %} {% endblock %}
 		<div id=wrap>
 			<div id=header>
 				<div id=headerleft>
-					<a href="https://wirgehenmit.org"><h2>Wir Gehen Mit - Logbook</h2></a>
+					<a href="https://wirgehenmit.org"><h2>{{ settings.SITE_NAME }}</h2></a>
 					{% block header %}
 						Homepage
 					{% endblock %}

@@ -131,6 +131,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "allauth.account.context_processors.account",
     "allauth.socialaccount.context_processors.socialaccount",
     "logbook.context_processors.logbook",
+    "simple_logbook.context_processors.simple_logbook_settings"
 )
 
 # A sample logging configuration. The only tangible logging

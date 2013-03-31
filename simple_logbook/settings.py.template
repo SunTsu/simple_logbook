@@ -39,6 +39,7 @@ TIME_ZONE = 'Europe/Berlin'
 LANGUAGE_CODE = 'de_DE'
 
 SITE_ID = 1
+SITE_NAME = "YOUR SITENAME"
 
 MEDIA_ROOT = ''
 MEDIA_URL = ''
