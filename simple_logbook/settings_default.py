@@ -130,6 +130,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.messages.context_processors.messages",
     "allauth.account.context_processors.account",
     "allauth.socialaccount.context_processors.socialaccount",
+    "logbook.context_processors.logbook",
 )
 
 # A sample logging configuration. The only tangible logging
